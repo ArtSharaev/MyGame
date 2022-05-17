@@ -1,14 +1,19 @@
-"""Лес"""
+"""Ферма"""
 
 
 from objetcs.cells.cell import Cell
 from imagelib.load import load_image
+import random
 
 
-class ForestCell(Cell):
+images = ["farm1.png", "farm2.png"]
+
+
+class FarmCell(Cell):
 
     def __init__(self, board, size, coords, *group):
-        self.image = load_image("forest1.png", (size, size))
+        img = random.choice(images)
+        self.image = load_image(img, (size, size))
         super().__init__(board, size, coords, *group)
 
     def update(self):

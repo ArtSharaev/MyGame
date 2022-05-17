@@ -1,11 +1,13 @@
+"""Поле"""
+
+
 from objetcs.cells.cell import Cell
 from imagelib.load import load_image
 import random
 
 
 images = ["field1.png", "field2.png",
-          "field3.png", "field4.png",
-          "forest1.png", "forest1.png"]
+          "field3.png", "field4.png"]
 
 
 class FieldCell(Cell):

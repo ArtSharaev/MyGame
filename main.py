@@ -1,11 +1,21 @@
 import pygame
 from objetcs.cells.field import FieldCell
+from objetcs.cells.farm import FarmCell
 from objetcs.cells.forest import ForestCell
+from objetcs.cells.water import WaterCell
+from objetcs.cells.mountain import MountainCell
 from objetcs.board import Board
+import random
 
 
 CELL_SIZE = 100
 BOARD_DIMENSIONS = (17, 9)
+RANDOM_ARRAY = ["field", "field", "field", "field", "field", "field",
+                "field", "field", "field", "field", "field", "field",
+                "forest", "forest", "forest", "forest", "forest", "forest",
+                "farm", "farm",
+                "water", "water",
+                "mountain"]
 
 
 if __name__ == '__main__':
@@ -19,7 +29,17 @@ if __name__ == '__main__':
 
     for y in range(BOARD_DIMENSIONS[1]):
         for x in range(BOARD_DIMENSIONS[0]):
-            FieldCell(gameboard, CELL_SIZE, (x, y), all_sprites)
+            obj = random.choice(RANDOM_ARRAY)
+            if obj == "field":
+                FieldCell(gameboard, CELL_SIZE, (x, y), all_sprites)
+            elif obj == "forest":
+                ForestCell(gameboard, CELL_SIZE, (x, y), all_sprites)
+            elif obj == "farm":
+                FarmCell(gameboard, CELL_SIZE, (x, y), all_sprites)
+            elif obj == "water":
+                WaterCell(gameboard, CELL_SIZE, (x, y), all_sprites)
+            elif obj == "mountain":
+                MountainCell(gameboard, CELL_SIZE, (x, y), all_sprites)
 
     running = True
     while running:

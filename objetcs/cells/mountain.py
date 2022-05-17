@@ -1,14 +1,19 @@
-"""Лес"""
+"""Горы"""
 
 
 from objetcs.cells.cell import Cell
 from imagelib.load import load_image
+import random
 
 
-class ForestCell(Cell):
+images = ["mountain1.png", "mountain2.png", "mountain3.png"]
+
+
+class MountainCell(Cell):
 
     def __init__(self, board, size, coords, *group):
-        self.image = load_image("forest1.png", (size, size))
+        img = random.choice(images)
+        self.image = load_image(img, (size, size))
         super().__init__(board, size, coords, *group)
 
     def update(self):
