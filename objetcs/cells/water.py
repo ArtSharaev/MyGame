@@ -9,7 +9,8 @@ class WaterCell(Cell):
 
     def __init__(self, board, size, coords, *group):
         self.image = load_image("water1.png", (size, size))
-        super().__init__(board, size, coords, *group)
+        name = "Water"
+        super().__init__(board, size, coords, name, *group)
 
     def update(self):
         pass

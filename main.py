@@ -4,6 +4,7 @@ from objetcs.cells.farm import FarmCell
 from objetcs.cells.forest import ForestCell
 from objetcs.cells.water import WaterCell
 from objetcs.cells.mountain import MountainCell
+from objetcs.cells.town import TownCell
 from objetcs.board import Board
 import random
 
@@ -13,8 +14,9 @@ BOARD_DIMENSIONS = (17, 9)
 RANDOM_ARRAY = ["field", "field", "field", "field", "field", "field",
                 "field", "field", "field", "field", "field", "field",
                 "forest", "forest", "forest", "forest", "forest", "forest",
-                "farm", "farm",
+                "farm",
                 "water", "water",
+                "town",
                 "mountain"]
 
 
@@ -26,7 +28,6 @@ if __name__ == '__main__':
     screen = pygame.display.set_mode(size)
     pygame.display.flip()
     all_sprites = pygame.sprite.Group()
-
     for y in range(BOARD_DIMENSIONS[1]):
         for x in range(BOARD_DIMENSIONS[0]):
             obj = random.choice(RANDOM_ARRAY)
@@ -40,6 +41,8 @@ if __name__ == '__main__':
                 WaterCell(gameboard, CELL_SIZE, (x, y), all_sprites)
             elif obj == "mountain":
                 MountainCell(gameboard, CELL_SIZE, (x, y), all_sprites)
+            elif obj == "town":
+                TownCell(gameboard, CELL_SIZE, (x, y), all_sprites)
 
     running = True
     while running:
@@ -48,5 +51,8 @@ if __name__ == '__main__':
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 running = False
+            if event.type == pygame.MOUSEBUTTONDOWN:
+                if event.button == 3:
+                    print(gameboard.get_cell(event.pos, CELL_SIZE))
         pygame.display.flip()
     pygame.quit()

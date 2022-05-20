@@ -14,7 +14,8 @@ class FarmCell(Cell):
     def __init__(self, board, size, coords, *group):
         img = random.choice(images)
         self.image = load_image(img, (size, size))
-        super().__init__(board, size, coords, *group)
+        name = "Farm"
+        super().__init__(board, size, coords, name, *group)
 
     def update(self):
         pass

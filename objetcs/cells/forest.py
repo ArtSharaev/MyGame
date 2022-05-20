@@ -9,7 +9,8 @@ class ForestCell(Cell):
 
     def __init__(self, board, size, coords, *group):
         self.image = load_image("forest1.png", (size, size))
-        super().__init__(board, size, coords, *group)
+        name = "Forest"
+        super().__init__(board, size, coords, name, *group)
 
     def update(self):
         pass
