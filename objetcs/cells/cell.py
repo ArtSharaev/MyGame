@@ -11,7 +11,7 @@ class Cell(pygame.sprite.Sprite):
         self.size = size
         self.coords = coords
         self.name = name
-        if self.name != "Selected":
+        if self.name != "selected":
             self.board.cells[coords[0]][coords[1]] = self
 
         self.rect = self.image.get_rect()
@@ -19,4 +19,4 @@ class Cell(pygame.sprite.Sprite):
         self.rect.y = coords[1] * size
 
     def __repr__(self):
-        return f"{self.name} cell at coords {self.coords} with side {self.size}"
+        return f"{self.name.capitalize()} cell at coords {self.coords} with side {self.size}"

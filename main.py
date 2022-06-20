@@ -1,12 +1,12 @@
 import pygame
-from objetcs.cells.field import FieldCell
-from objetcs.cells.farm import FarmCell
-from objetcs.cells.forest import ForestCell
-from objetcs.cells.water import WaterCell
-from objetcs.cells.mountain import MountainCell
-from objetcs.cells.town import TownCell
-from objetcs.cells.selected import SelectedCell
-from objetcs.cells.owned import OwnedCell
+from objetcs.cells.map_cells.field import FieldCell
+from objetcs.cells.map_cells.farm import FarmCell
+from objetcs.cells.map_cells.forest import ForestCell
+from objetcs.cells.map_cells.water import WaterCell
+from objetcs.cells.map_cells.mountain import MountainCell
+from objetcs.cells.map_cells.town import TownCell
+from objetcs.cells.indicators.selected import SelectedCell
+from objetcs.cells.indicators.owned import OwnedCell
 from objetcs.board import Board
 import random
 
@@ -23,7 +23,6 @@ RANDOM_ARRAY = ["field", "field", "field", "field", "field", "field",
 
 
 if __name__ == '__main__':
-
     # ЗАПУСК ИГРЫ
     gameboard = Board(BOARD_DIMENSIONS)
     pygame.init()
