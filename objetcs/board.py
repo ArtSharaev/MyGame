@@ -5,13 +5,13 @@ class Board:
     def __init__(self, dimensions):
         # создаем массив с клетками
         self.cells_matrix = []
-        self.mob_matrix = []
+        self.units_matrix = []
         for i in range(dimensions[0]):
             arr = []
             for j in range(dimensions[1]):
                 arr.append(None)
             self.cells_matrix.append(arr)
-            self.mob_matrix.append(arr)
+            self.units_matrix.append(arr)
         self.dimensions = dimensions
 
     def get_cell(self, mouse_pos, cell_size):

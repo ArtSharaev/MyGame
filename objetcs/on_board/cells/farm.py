@@ -1,20 +1,20 @@
-"""Город"""
+"""Ферма"""
 
 
-from objetcs.cells.cell import Cell
+from objetcs.on_board.cell import Cell
 from imagelib.load import load_image
 import random
 
 
-images = ["town1.png", "town2.png"]
+images = ["farm1.png", "farm2.png"]
 
 
-class TownCell(Cell):
+class FarmCell(Cell):
 
     def __init__(self, board, size, coords, *group):
         img = random.choice(images)
         self.image = load_image(img, (size, size))
-        name = "town"
+        name = "farm"
         super().__init__(board, size, coords, name, *group)
 
     def update(self):

@@ -1,12 +1,12 @@
 import pygame
-from objetcs.cells.map_cells.field import FieldCell
-from objetcs.cells.map_cells.farm import FarmCell
-from objetcs.cells.map_cells.forest import ForestCell
-from objetcs.cells.map_cells.water import WaterCell
-from objetcs.cells.map_cells.mountain import MountainCell
-from objetcs.cells.map_cells.town import TownCell
-from objetcs.cells.indicators.selected import SelectedCell
-from objetcs.cells.indicators.owned import OwnedCell
+from objetcs.on_board.cells.field import FieldCell
+from objetcs.on_board.cells.farm import FarmCell
+from objetcs.on_board.cells.forest import ForestCell
+from objetcs.on_board.cells.water import WaterCell
+from objetcs.on_board.cells.mountain import MountainCell
+from objetcs.on_board.cells.town import TownCell
+from objetcs.on_board.indicators.selected import SelectedCell
+from objetcs.on_board.indicators.owned import OwnedCell
 from objetcs.board import Board
 import random
 

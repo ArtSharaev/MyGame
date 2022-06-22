@@ -1,11 +1,11 @@
 """Индикатор захваченной клетки"""
 
 
-from objetcs.cells.cell import Cell
+from objetcs.on_board.indicator import Indicator
 from imagelib.load import load_image
 
 
-class OwnedCell(Cell):
+class OwnedCell(Indicator):
 
     def __init__(self, board, size, coords, owner, *group):
         if owner == "r":

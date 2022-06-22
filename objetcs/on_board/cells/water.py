@@ -1,7 +1,7 @@
 """Вода"""
 
 
-from objetcs.cells.cell import Cell
+from objetcs.on_board.cell import Cell
 from imagelib.load import load_image
 
 
