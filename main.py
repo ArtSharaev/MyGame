@@ -13,7 +13,7 @@ import random
 
 FPS = 120
 CELL_SIZE = 100
-BOARD_DIMENSIONS = (17, 9)
+BOARD_DIMENSIONS = (12, 6)
 RANDOM_ARRAY = ["field", "field", "field", "field", "field", "field",
                 "field", "field", "field", "field", "field", "field",
                 "forest", "forest", "forest", "forest", "forest", "forest",
